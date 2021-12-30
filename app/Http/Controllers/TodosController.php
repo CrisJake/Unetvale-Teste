@@ -12,4 +12,15 @@ class TodosController extends Controller
         
         return view('html',['todos' => $todos]);
     }
+
+    public function check(Request $request) {
+        $var_dump("teste");
+        $todos = new todos;
+
+        $todos->completed = $request->completed;
+        
+        $todos->save();
+
+        return view('welcome')->with('msg', 'Salvo com sucesso!');
+    }
 }
