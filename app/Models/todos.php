@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class todos extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'completed'
+    ];
 }

@@ -15,7 +15,7 @@ class TodosTableSeeder extends Seeder
     public function run()
     {
         todos::create([
-            'name'      => 'Cristhyan',
+            'name'      => 'Cristhyan'
         ]);
     }
 }
