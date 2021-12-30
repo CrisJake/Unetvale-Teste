@@ -14,13 +14,19 @@ class TodosController extends Controller
     }
 
     public function check(Request $request) {
-        $var_dump("teste");
+
         $todos = new todos;
 
-        $todos->completed = $request->completed;
+        
+
+        if($request->has('completed')){
+            $todos->completed = $request->completed;
         
         $todos->save();
+        }else{
+            //Checkbox not checked
+        }
 
-        return view('welcome')->with('msg', 'Salvo com sucesso!');
+        return redirect('/')->with('msg', 'Salvo com sucesso!');
     }
 }

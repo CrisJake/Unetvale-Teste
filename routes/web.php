@@ -20,3 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/todos/list', 'App\Http\Controllers\TodosController@list');
+
+Route::post('/todos/check/{id}', 'App\Http\Controllers\TodosController@check');
